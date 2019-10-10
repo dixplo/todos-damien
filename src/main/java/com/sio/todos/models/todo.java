@@ -1,22 +1,24 @@
 package com.sio.todos.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/* for JPA */
 @Entity
 public class todo {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String label;
 	private String description;
-	private float avancement;
+	private Float avancement;
 	private int poids;
-		
-
+	List<todo> todos;
 	
 	
-	/* GETTERS AND SETTERS */
 	public int getId() {
 		return id;
 	}
@@ -35,10 +37,10 @@ public class todo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public float getAvancement() {
+	public Float getAvancement() {
 		return avancement;
 	}
-	public void setAvancement(float avancement) {
+	public void setAvancement(Float avancement) {
 		this.avancement = avancement;
 	}
 	public int getPoids() {
@@ -47,6 +49,7 @@ public class todo {
 	public void setPoids(int poids) {
 		this.poids = poids;
 	}
+
 	
 	
 }

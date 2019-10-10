@@ -1,5 +1,27 @@
-<html>
+{{>header}}
 
-<h1>Test</h1>
+<div id="app">
 
-</html>
+<a href="/addToDo">
+<input type="button" value="Add a To Do">
+</a>
+
+<ul>
+	<li><input v-model="message" placeholder="description" ></li>
+	</br>
+	<li><input v-model="message" placeholder="description"></li>
+	</br>
+	<li><input v-model="message" placeholder="description"></li>
+	</br>
+	<li><input v-model="message" placeholder="description"></li>
+</ul>
+
+	</br>
+	<button v-on:click="message='Nouvelle valeur'">set Value</button>
+	</br>
+	</br>
+	<button @click="increment()">Increment</button>
+</div>
+
+
+{{>footer}}

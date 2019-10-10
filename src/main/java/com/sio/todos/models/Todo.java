@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class todo {
+public class Todo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -16,7 +16,7 @@ public class todo {
 	private String description;
 	private Float avancement;
 	private int poids;
-	List<todo> todos;
+	List<Todo> todos;
 	
 	
 	public int getId() {
